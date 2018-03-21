@@ -1,0 +1,335 @@
+@media screen and (min-width: 1000px) and (max-width:4096px) {
+a{
+  text-decoration: none;
+  font-family:Montserrat;
+  display: block;
+  margin:1em;
+  color: white;
+}
+
+p{
+font-family:Montserrat;
+font-size: 1;
+}
+
+h1{
+font-family:sans-serif;
+margin-top: 0;
+margin-bottom: 60px !important;
+
+}
+
+h1,h2,h3,h4{
+  font-family:sans-serif;
+}
+
+body{
+  background-color:#1b081b;
+  background-blend-mode: multiply;
+  color: white;
+  width: 100%;
+  height: 100%;
+}
+
+.sectionAbout{
+  display: grid;
+  grid-template-columns: repeat(10,1fr);
+  grid-template-rows: repeat(1,1fr);
+  height: 100%;
+}
+
+#myBtn {
+  display:unset;
+}
+/*Hover section*/
+.navigation .pages a:hover {
+  color: #a2a2a2;
+}
+
+/*Navigation*********************************************************************************/
+.navigation .pages a:hover {
+    color: #a2a2a2;
+}
+.navigation{
+  grid-column: 1/ span 10;
+  grid-row: 1/span 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 50px 50px 0 50px;
+}
+.logo {
+  grid-column: 1;
+  grid-row: 1;
+}
+.pages {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self:end;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.about{
+  grid-column: 2;
+  grid-row: 1;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.main{
+  grid-column: 1;
+  grid-row: 1;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+/*Navigation*********************************************************************************/
+
+.aboutContent{
+  grid-column: 2/ span 5;
+  grid-row: 1/span 10;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  margin: 0 0 20px 0;
+  align-self: center;
+ width: 600px;
+ height: 550px;
+}
+.jacobTitle{
+  grid-column: 1/3;
+  grid-row: 2/4;
+  z-index: 6;
+  align-self: start;
+  font-weight: 3em !important;
+}
+
+.paraOne{
+  text-align: justify;
+  grid-column: 1/4;
+  grid-row: 3/4;
+  z-index: 6;
+  line-height: 1.6em;
+  align-self: center;
+}
+
+.profileimage{
+  grid-column: 7/ span 5;
+  grid-row: 1/span 1;
+  z-index: -1;
+  position: relative;
+  width: 100%;
+  height:auto;
+}
+
+
+
+}
+@media only screen and (min-device-width : 0px) and (max-device-width : 600px) {
+
+
+    body{
+      background: black;  /* fallback for old browsers */
+      color: white;
+      width: 100%;
+      height: 100%;
+    }
+    a{
+      text-decoration: none;
+      font-family:Montserrat;
+      color: white;
+    }
+    h1{
+      font-family:sans-serif;
+      font-size: 2em;
+      margin-top: 0;
+    }
+    h1,h2,h3,h4{
+      font-family:sans-serif;
+    }
+    .sectionAbout{
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 10% 40% 50%;
+    }
+  /*Navigation*********************************************************************************/
+  .navigation{
+    display:none;
+  }
+  #logo{
+  width:35px ;
+  height: 35px;
+  z-index: 1;
+  }
+  /*Navigation*********************************************************************************/
+
+
+  img{
+    width: 100%;
+    height:auto;
+    grid-column: 1/ span 1;
+    grid-row: 1/ span 2;
+    z-index: -10;
+    justify-self:end;
+  }
+  .jacobTitle{
+    grid-column: 1/ span 1;
+    grid-row: 1/ span 1;
+  font-size: 1em;
+  line-height: 2em;
+  align-self: end;
+    margin: 0 7% 0 7%;
+  }
+  .paraOne{
+    grid-column: 1/ span 1;
+    grid-row: 2/ span 1;
+    font-size: 1em;
+    line-height: 1.5em;
+    text-align: justify;
+    margin: 0 7% 0 7%;
+  }
+
+}
+
+@media only screen and (min-device-width : 240px) and (max-device-width : 320px) {
+
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+}
+@media only screen and (min-device-width : 480px) and (max-device-width : 800px) {
+
+}
+@media only screen and (min-device-width : 480px) and (max-device-width : 854px) {
+
+}
+@media only screen and (min-device-width : 540px) and (max-device-width : 960px) {
+
+}
+@media only screen and (min-device-width : 600px) and (max-device-width : 1024px) {
+/*smallest tablet double lauout*/
+a{
+  text-decoration: none;
+  font-family:Montserrat;
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
+  color: white;
+}
+body{
+  background-color:#1b081b;
+  background-blend-mode: multiply;
+  color: white;
+  width: 100%;
+  height: 100%;
+
+}
+
+.sectionAbout{
+display: grid;
+grid-template-columns: 25% 25% 50%;
+grid-template-rows:auto 25% 25% 25% 25%;
+}
+/*Navigation*********************************************************************************/
+.navigation .pages a:hover {
+    color: #a2a2a2;
+}
+.navigation{
+  grid-column: 1/ span 20;
+  grid-row: 1/span 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 50px 50px 0 50px;
+}
+.logo {
+  grid-column: 1;
+  grid-row: 1;
+}
+.pages {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self:end;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.about{
+  grid-column: 1;
+  grid-row: 1;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.main{
+  grid-column: 2;
+  grid-row: 1;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+/*Navigation*********************************************************************************/
+
+img{
+  width: 100%;
+  height:auto;
+  grid-column: 1/ span 10;
+  grid-row: 1/ span 2;
+  z-index: -10;
+  justify-self:end;
+}
+.jacobTitle{
+  grid-column: 2/ span 5;
+  grid-row: 1/ span 2;
+font-size: 1em;
+line-height: 2em;
+align-self: center;
+background-color: red;
+}
+
+.paraOne{
+  grid-gap: 20px;
+  grid-column: 2;
+  grid-row: 3;
+  font-size: 1.3em;
+  line-height: 1.2em;
+  text-align: justify;
+  align-self: end;
+  background-color: green;
+
+}
+
+}
+
+@media only screen and (min-device-width : 640px) and (max-device-width : 1136px) {
+
+}
+@media only screen and (min-device-width : 720px) and (max-device-width : 1280px) {
+
+}
+@media only screen and (min-device-width : 750px) and (max-device-width : 1334px) {
+
+}
+@media only screen and (min-device-width : 1080px) and (max-device-width : 1920px) {
+
+}
+@media only screen and (min-device-width : 1440px) and (max-device-width : 2560px) {
+
+}
+@media only screen and (min-device-width : 2160px) and (max-device-width : 3840px) {
+
+}
+/*----------------------------------------SMART PHONE MEDIA QUERIES------------------*/
+
+
+/*----------------------------------------TABLET AND PC MONITOR MEDIA QUERIES------------------*/
+
+@media only screen and (min-device-width : 1024px) and (max-device-width : 768px) {
+}
+@media only screen and (min-device-width : 1280px) and (max-device-width : 1024px) {
+}
+@media only screen and (min-device-width : 1280px) and (max-device-width : 800px) {
+}
+@media only screen and (min-device-width : 1366px) and (max-device-width : 768px) {
+}
+@media only screen and (min-device-width : 1920px) and (max-device-width : 1080px) {
+}
+@media only screen and (min-device-width : 2560px) and (max-device-width : 1440px) {
+}
+
+/*----------------------------------------TABLET AND PC MONITOR MEDIA QUERIES------------------*/

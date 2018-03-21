@@ -1,0 +1,287 @@
+@media screen and (min-width: 1224px) and (max-width:4096px) {
+
+  #myBtn {
+    display: none;
+  }
+  .mobAbout{
+    display: none;
+  }
+  .mobMain{
+    display: none;
+  }
+  #popUp {
+  display: none;
+  }
+
+  #popUp p{
+   display: none;
+  }
+#menuToggle{
+  display: none;
+}
+  .sidebar{
+   position: fixed;
+   top: 30%;
+   left: 3%;
+  }
+  .mobLogo{
+    display: none;
+  }
+  .mobNav{
+    display: none;
+  }
+  #square{
+  transform: rotate(20deg);
+  display: none;
+  position: absolute;
+  top: 65px;
+  right: 427px;
+  width:34px ;
+  height: 37px;
+  z-index: -1;
+  }
+  #circle{
+  display: none;
+  position: absolute;
+  top: 65px;
+  right: 340px;
+  width:34px ;
+  height: 37px;
+  z-index: -1;
+  }
+  #hexagon{
+  display: none;
+  position: absolute;
+  top: 65px;
+  right: 260px;
+  width:34px ;
+  height: 37px;
+  z-index: -1;
+  }
+  #triangle{
+    transform: rotate(20deg);
+  display: none;
+  position: absolute;
+  top: 67px;
+  right: 160px;
+  width:34px ;
+  height: 37px;
+  z-index: -1;
+  }
+
+  #logo{
+  width:10%;
+  height: 10%;
+  z-index: -1;
+  fill: white !important;
+  }
+
+  .active#square{
+    display:unset;/*resets styles*/
+  }
+
+}
+
+
+/*----------------------------------------SMART PHONE MEDIA QUERIES-----------------------------------------*/
+
+@media only screen and (min-device-width : 0px) and (max-device-width : 600px) {
+  /*----------------------------------------GENERAL STYLING-----------------------------------------*/
+
+  .sidebar{
+    display: none;
+  }
+  .iconStyle{
+    display: none;
+  }
+
+  .smooth {
+  transition: width .5s;
+  transition: height .5s;
+  }
+/*----------------------------------------GENERAL STYLING-----------------------------------------*/
+
+/*----------------------------------------Navigation Slider-----------------------------------------*/
+  #popUp {
+    width:100%;
+    background:#1b081b;
+    opacity: .5;
+    color:black;
+    display:none;
+    overflow: hidden;
+    z-index: 20;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  #popUp p{
+   padding:20px;
+  }
+/*----------------------------------------Navigation Slider-----------------------------------------*/
+
+/*----------------------------------------Navigation -----------------------------------------*/
+
+.mobNav {
+    margin: 115px 50px 0 50px;
+    text-align: center;
+  }
+
+    .nav-toggle {
+      background: transparent;
+      border: 1px solid transparent;
+      z-index: 30;
+      -webkit-transform(50%, 50%);
+      transform: translate(7%, 7%);
+    }
+
+    .nav-toggle:focus {
+      outline-width: 0;
+    }
+
+    .nav-toggle [class*='bar-'] {
+      background: #ffffff;
+      display: block;
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+      -webkit-transition: .2s ease all;
+              transition: .2s ease all;
+      border-radius: 8px;
+      height: 2px;
+      width: 30px;
+      margin-bottom: 5px;
+
+    }
+
+    .nav-toggle .bar-bot {
+      margin-bottom: 0;
+    }
+
+    .opened .bar-top {
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg);
+      -webkit-transform-origin: 15% 15%;
+              transform-origin: 15% 15%;
+    }
+    .opened .bar-mid {
+      opacity: 0;
+    }
+    .opened .bar-bot {
+      -webkit-transform: rotate(45deg);
+              transform: rotate(-45deg);
+      -webkit-transform-origin: 15% 95%;
+              transform-origin: 15% 95%;
+    }
+
+
+  .mobLogo{
+    background: transparent;
+    z-index: 40;
+
+  }
+  /*----------------------------------------Navigation -----------------------------------------*/
+  #myBtn {
+    display: none;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    color: black;
+    cursor: pointer;
+    padding: 6%;
+    border-radius: 50%;
+  }
+
+  #myBtn:hover {
+    background-color: #555;
+  }
+}
+@media only screen and (min-device-width : 600px) and (max-device-width : 1024px) {
+
+.mobAbout{
+  display: none;
+}
+.mobMain{
+  display: none;
+}
+#popUp {
+display: none;
+}
+
+#popUp p{
+ display: none;
+}
+
+.sidebar{
+ position: fixed;
+ top: 30%;
+ left: 3%;
+}
+
+.logo{
+  width: 2%;
+  height: 2%;
+}
+
+.mobLogo{
+  display: none;
+}
+.mobNav{
+  display: none;
+}
+#square{
+transform: rotate(20deg);
+display: none;
+position: absolute;
+top: 65px;
+right: 427px;
+width:34px ;
+height: 37px;
+z-index: -1;
+}
+#circle{
+display: none;
+position: absolute;
+top: 65px;
+right: 340px;
+width:34px ;
+height: 37px;
+z-index: -1;
+}
+#hexagon{
+display: none;
+position: absolute;
+top: 65px;
+right: 260px;
+width:34px ;
+height: 37px;
+z-index: -1;
+}
+#triangle{
+  transform: rotate(20deg);
+display: none;
+position: absolute;
+top: 67px;
+right: 160px;
+width:34px ;
+height: 37px;
+z-index: -1;
+}
+
+#logo{
+width:64px ;
+height: 67px;
+z-index: -1;
+fill: white !important;
+}
+
+.active#square{
+  display:unset;/*resets styles*/
+}
+
+}
+
+}

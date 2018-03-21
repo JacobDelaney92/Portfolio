@@ -1,0 +1,95 @@
+
+body{
+  background-color: black;
+  color: white;
+}
+img{
+  width: 100%;
+  height: auto;
+  transition: all .3s ease-in-out;
+}
+/*img:hover {
+  box-shadow: 0 6px 6px 0 rgba(33,33,33,.4);
+  transform: scale(1.02);
+}*/
+
+
+
+.portfolioGBdy{
+  display:grid;
+  grid-template-columns: 5% 1fr 1fr 5%;
+  grid-template-rows: 10% repeat(8 1fr);
+ grid-gap: 10px;
+}
+/*Navigation*********************************************************************************/
+
+.mobNavigation{
+  grid-column: 2/ span 2;
+  grid-row: 1/span 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 15% 0 15% 0;
+}
+/*Add nested grid*/
+.mobLogo{
+  grid-column: 1;
+  grid-row: 1;
+  justify-self:start;
+}
+.mobMenu {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: center;
+  justify-self:end;
+}
+  .navigation{
+    display:none;
+  }
+  #logo{
+  width:35px ;
+  height: 35px;
+  z-index: 1;
+  }
+/*Navigation*********************************************************************************/
+.backBtn{
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: start;
+  z-index: 5;
+}
+
+.topImage{
+  grid-column: 2/ span 2;
+  grid-row: 2/span 2;
+}
+.leftTallImage{
+  grid-column: 2;
+  grid-row: 4/span 3;
+}
+.workAbout{
+  grid-column: 3;
+  grid-row: 4/span 1;
+}
+.rightBelowBioImage{
+  grid-column: 3;
+  grid-row: 5/span 1;
+}
+.fullWidthImage{
+  grid-column: 2/span 2;
+  grid-row: 6/span 1;
+}
+.btmLeftImage{
+  grid-column: 2;
+  grid-row: 7/span 2;
+}
+.btmRightImage{
+  grid-column: 3;
+  grid-row: 8/span 2;
+}
+
+@media only screen and (min-device-width : 0px) and (max-device-width : 600px) {
+
+
+
+
+}
