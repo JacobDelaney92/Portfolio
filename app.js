@@ -9,6 +9,18 @@ var index = require('./routes/index');
 var about = require('./routes/about');
 var taragenyx = require('./routes/taragenyx');
 var focusgames = require('./routes/focusgames');
+var honoursProject = require('./routes/honoursProject');
+var freelance = require('./routes/freelance');
+var appleStore = require('./routes/appleStore');
+var haus = require('./routes/haus');
+var normanMclaren = require('./routes/normanMclaren');
+var dataVis = require('./routes/dataVis');
+var projectionM = require('./routes/projectionM');
+var soundV = require('./routes/soundV');
+var mask = require('./routes/mask');
+var arduino = require('./routes/arduino');
+
+
 
 var app = express();
 
@@ -28,6 +40,20 @@ app.use('/', index);
 app.use('/about.html', about);
 app.use('/taragenyx.html', taragenyx);
 app.use('/focusgames.html', focusgames);
+app.use('/honoursProject.html', honoursProject);
+app.use('/freelance.html', freelance);
+app.use('/appleStore.html', appleStore);
+app.use('/haus.html', haus);
+app.use('/normanMclaren.html', normanMclaren);
+app.use('/dataVis.html', dataVis);
+app.use('/projectionM.html', projectionM);
+app.use('/soundV.html', soundV);
+app.use('/mask.html', mask);
+app.use('/arduino.html', arduino);
+
+
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

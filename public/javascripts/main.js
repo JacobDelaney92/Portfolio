@@ -50,12 +50,19 @@ var toggle = document.querySelector('.nav-toggle');
 
 toggle.addEventListener('click', function(e) {
   if(menuToggle.classList.contains('opened')){
+    console.log("check 1 2");
     Smooth.collapse('popUp');
   }else{
     Smooth.expand('popUp');
+    var element = document.getElementById("navCover");
+    element.classList.add("updated");
   }
+  document.getElementById('navBackdrop').classList.toggle('overlay');
+  document.getElementsByTagName('body')[0].classList.toggle('hidden');
     this.classList.toggle('opened');
 });
+
+
 
 
 
@@ -70,7 +77,6 @@ var Smooth = {
             console.log(el.style);
         }
         return el;
-        console.log(el);
     },
     expand: function(id) {
         var div = Smooth.init(id);

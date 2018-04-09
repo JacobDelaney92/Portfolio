@@ -1,7 +1,7 @@
-@media screen and (min-width: 1224px) and (max-width:4096px) {
+@media (min-width: 1020px) {
 
   #myBtn {
-    display: none;
+    display: none !important;
   }
   .mobAbout{
     display: none;
@@ -19,11 +19,15 @@
 #menuToggle{
   display: none;
 }
-  .sidebar{
-   position: fixed;
-   top: 30%;
-   left: 3%;
-  }
+.sidebar {
+    position: fixed !important;
+    top: 50% !important;
+    left: 2% !important;
+  /*  margin-left: 0.4em !important;*/
+    display: block;
+}
+
+
   .mobLogo{
     display: none;
   }
@@ -73,7 +77,7 @@
   width:10%;
   height: 10%;
   z-index: -1;
-  fill: white !important;
+  fill: #a2a2a2 !important;
   }
 
   .active#square{
@@ -85,15 +89,33 @@
 
 /*----------------------------------------SMART PHONE MEDIA QUERIES-----------------------------------------*/
 
-@media only screen and (min-device-width : 0px) and (max-device-width : 600px) {
+@media (max-width: 605px) {
   /*----------------------------------------GENERAL STYLING-----------------------------------------*/
 
-  .sidebar{
-    display: none;
+
+  #navBackdrop {
+      position:absolute;
+      /* color with alpha transparency */
+      background-color: rgb(9, 9, 9);
+      /* stretch to screen edges */
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 2000;
+      overflow: hidden;
+      display: none;
   }
-  .iconStyle{
-    display: none;
-  }
+
+
+ .overlay {
+  opacity:0.5;
+  display:unset !important;
+}
+
+.hidden{
+  overflow: hidden;
+}
 
   .smooth {
   transition: width .5s;
@@ -104,15 +126,15 @@
 /*----------------------------------------Navigation Slider-----------------------------------------*/
   #popUp {
     width:100%;
-    background:#1b081b;
-    opacity: .5;
-    color:black;
+    background:#ffffff;
+    color:#a2a2a2;
     display:none;
     overflow: hidden;
-    z-index: 20;
+    z-index: 3000;
     position: absolute;
     top: 0;
     left: 0;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
   }
 
   #popUp p{
@@ -123,15 +145,15 @@
 /*----------------------------------------Navigation -----------------------------------------*/
 
 .mobNav {
-    margin: 115px 50px 0 50px;
+    margin: 0px 50px 0 50px;
     text-align: center;
   }
 
     .nav-toggle {
       background: transparent;
       border: 1px solid transparent;
-      z-index: 30;
-      -webkit-transform(50%, 50%);
+      z-index: 3015;
+      -webkit-transform(7%, 7%);
       transform: translate(7%, 7%);
     }
 
@@ -140,7 +162,7 @@
     }
 
     .nav-toggle [class*='bar-'] {
-      background: #ffffff;
+      background: #a2a2a2;
       display: block;
       -webkit-transform: rotate(0deg);
               transform: rotate(0deg);
@@ -152,6 +174,7 @@
       margin-bottom: 5px;
 
     }
+
 
     .nav-toggle .bar-bot {
       margin-bottom: 0;
@@ -176,62 +199,278 @@
 
   .mobLogo{
     background: transparent;
-    z-index: 40;
+    z-index: 3015;
 
   }
+
+  .navLine {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.navLine:before, .navLine:after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 5px;
+  top: 50%;
+  margin-top: -0.5px;
+  background: #229dd8;
+}
+
+.navLine:before {
+  left: -2.5px;
+}
+.navLine:after {
+  right: 2.5px;
+  background: #229dd8;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.navLine:hover:before {
+  background: #229dd8;
+  width: 100%;
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.navLine:hover:after {
+  background: transparent;
+  width: 100%;
+  transition: 0s;
+}
+
+
   /*----------------------------------------Navigation -----------------------------------------*/
   #myBtn {
     display: none;
     position: fixed;
+    font-size: 1em;
     bottom: 5%;
-    right: 5%;
+    left: 44%;
     z-index: 99;
-    font-size: 18px;
-    border: none;
     outline: none;
-    color: black;
+    width: 46px;
+    height: 46px;
     cursor: pointer;
-    padding: 6%;
+    background-color: rgba(255,255,255, 0.2);
     border-radius: 50%;
+    border: 2px solid #229dd8;
+    color: #229dd8;
   }
 
   #myBtn:hover {
-    background-color: #555;
+    border: 1px #a2a2a2 solid;
   }
 }
-@media only screen and (min-device-width : 600px) and (max-device-width : 1024px) {
 
-.mobAbout{
-  display: none;
-}
-.mobMain{
-  display: none;
-}
-#popUp {
-display: none;
-}
-
-#popUp p{
- display: none;
+/* This is the fix to your nav issues :) */
+@media (min-width: 1020px) {
+	.navigation {
+		display: grid !important;
+	}
+	.mobNavigation {
+		display: none !important;
+	}
 }
 
-.sidebar{
- position: fixed;
- top: 30%;
- left: 3%;
+@media (min-width: 605px) {
+	  .portfolioGBdy{
+		grid-template-rows: 5% repeat(8 1fr)!important;
+	}
 }
 
-.logo{
-  width: 2%;
-  height: 2%;
+
+
+
+/*
+#popUp .mobAbout{
+	padding-top: 10px;
+
+}*/
+
+
+#popUp .mobMain {
+	padding-top: 70px;
+}
+@media (min-width: 605px) and (max-width: 1020px){
+
+
+  #myBtn {
+    display: none;
+    position: fixed;
+    font-size: 1em;
+    bottom: 3%;
+    left: 44%;
+    z-index: 99;
+    outline: none;
+    width: 46px;
+    height: 46px;
+    cursor: pointer;
+    background-color: rgba(255,255,255, 0.2);
+    border-radius: 50%;
+    border: 2px solid #229dd8;
+    color: #229dd8;
+  }
+
+  #myBtn:hover {
+    border: 1px #a2a2a2 solid;
+  }
 }
 
-.mobLogo{
-  display: none;
-}
-.mobNav{
-  display: none;
-}
+/*  .sidebar{
+   position: fixed;
+   top: 30%;
+   left: 3%;
+   margin-left:1%;
+  }*/
+
+    #navBackdrop {
+        position:absolute;
+        /* color with alpha transparency */
+        background-color: rgb(9, 9, 9);
+        /* stretch to screen edges */
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 2000;
+        overflow: hidden;
+        display: none;
+    }
+
+
+   .overlay {
+    opacity:0.5;
+    display:unset !important;
+  }
+
+  .hidden{
+    overflow: hidden;
+  }
+
+    .smooth {
+    transition: width .5s;
+    transition: height .5s;
+    }
+  /*----------------------------------------GENERAL STYLING-----------------------------------------*/
+
+  /*----------------------------------------Navigation Slider-----------------------------------------*/
+    #popUp {
+      width:100%;
+      background:#ffffff;
+      color:#a2a2a2;
+      display:none;
+      overflow: hidden;
+      z-index: 3000;
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    }
+
+    #popUp p{
+     padding:20px;
+    }
+  /*----------------------------------------Navigation Slider-----------------------------------------*/
+
+  /*----------------------------------------Navigation -----------------------------------------*/
+
+  .mobNav {
+      text-align: center;
+    }
+
+      .nav-toggle {
+        background: transparent;
+        border: 1px solid transparent;
+        z-index: 3015;
+        -webkit-transform(50%, 50%);
+        transform: translate(7%, 7%);
+      }
+
+      .nav-toggle:focus {
+        outline-width: 0;
+      }
+
+      .nav-toggle [class*='bar-'] {
+        background: #a2a2a2;
+        display: block;
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+        -webkit-transition: .2s ease all;
+                transition: .2s ease all;
+        border-radius: 8px;
+        height: 2px;
+        width: 30px;
+        margin-bottom: 5px;
+
+      }
+
+
+      .nav-toggle .bar-bot {
+        margin-bottom: 0;
+      }
+
+      .opened .bar-top {
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+        -webkit-transform-origin: 15% 15%;
+                transform-origin: 15% 15%;
+      }
+      .opened .bar-mid {
+        opacity: 0;
+      }
+      .opened .bar-bot {
+        -webkit-transform: rotate(45deg);
+                transform: rotate(-45deg);
+        -webkit-transform-origin: 15% 95%;
+                transform-origin: 15% 95%;
+      }
+
+
+    .mobLogo{
+      background: transparent;
+      z-index: 3015;
+
+    }
+
+    .navLine {
+    position: relative;
+    display: block;
+    cursor: pointer;
+  }
+
+  .navLine:before, .navLine:after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 5px;
+    top: 50%;
+    margin-top: -0.5px;
+    background: #229dd8;
+  }
+
+  .navLine:before {
+    left: -2.5px;
+  }
+  .navLine:after {
+    right: 2.5px;
+    background: #229dd8;
+    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+
+  .navLine:hover:before {
+    background: #229dd8;
+    width: 100%;
+    transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+
+  .navLine:hover:after {
+    background: transparent;
+    width: 100%;
+    transition: 0s;
+  }
+
 #square{
 transform: rotate(20deg);
 display: none;
@@ -272,10 +511,11 @@ z-index: -1;
 }
 
 #logo{
-width:64px ;
-height: 67px;
+/*  -webkit-width(196px);
+  -webkit-height(115px);*/
+  width: 45px;
+  height: 45px;
 z-index: -1;
-fill: white !important;
 }
 
 .active#square{
